@@ -2,6 +2,7 @@ namespace UnoXamlApp2;
 
 public sealed partial class MainPage : Page
 {
+
     public MainPage()
     {
         this.InitializeComponent();
@@ -48,8 +49,24 @@ public sealed partial class MainPage : Page
                 PrimaryButtonText = "Okay",
                 XamlRoot = this.XamlRoot,
             };
-            await dialog.ShowAsync();
 
+            var result = await dialog.ShowAsync();
+            if (this.FindName("dialogResult") is TextBlock dialogResult)
+            {
+                if (result == ContentDialogResult.Primary)
+                {
+                    dialogResult.Text = "User selected Yes.";
+                }
+                else if (result == ContentDialogResult.Secondary)
+                {
+                    dialogResult.Text = "User selected No.";
+                }
+                else
+                {
+                    dialogResult.Text = "User cancelled the Dialog";
+                }
+
+            }
         }
         catch (Exception ex)
         {

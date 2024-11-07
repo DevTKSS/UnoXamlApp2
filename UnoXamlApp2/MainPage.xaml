@@ -40,7 +40,8 @@
                         </MenuFlyout>
                     </DropDownButton.Flyout>
                 </DropDownButton>
-      </StackPanel>
+                <TextBlock x:Name="dialogResult"/>
+            </StackPanel>
     </Grid>
   </ScrollViewer>
 </Page>
