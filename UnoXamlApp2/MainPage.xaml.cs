@@ -1,5 +1,6 @@
 namespace UnoXamlApp2;
 
+[Bindable]
 public sealed partial class MainPage : Page
 {
 
