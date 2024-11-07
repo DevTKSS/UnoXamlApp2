@@ -1,0 +1,10 @@
+{
+  "background_color": "#ffffff",
+  "description": "UnoXamlApp2",
+  "display": "standalone",
+  "name": "UnoXamlApp2",
+  "short_name": "UnoXamlApp2",
+  "start_url": "/index.html",
+  "theme_color": "#ffffff",
+  "scope": "/"
+}
