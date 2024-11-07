@@ -27,7 +27,7 @@ public sealed partial class MainPage : Page
         try
         {
             string callerName = "";
-            if (sender is Button clickedButton)
+            if (sender is MenuFlyoutItem clickedButton)
             {
                 callerName = clickedButton.Name;
             }
